@@ -36,7 +36,7 @@ class Admin_auth(Resource):
             return {"message":"Invalid login credentials"}, 400
 
 class Admin(Resource):
-    @jwt_required
+
     def get(self):
         result = db.admins.find()
         ad=[]
@@ -50,7 +50,7 @@ class Admin(Resource):
             return {"message":"no data found"}, 404
         return ad
 
-    @jwt_required
+
     def post(self,name):
         data = request.get_json()
         admin ={ 
@@ -64,7 +64,7 @@ class Admin(Resource):
         if res:
             return {"Sucess":"Entered new admin"}, 200
 
-    @jwt_required
+
     def delete(self,name):
         admins = db.admins.find()
         res = next(filter(lambda x: x['name']==name,admins),None)
@@ -78,7 +78,7 @@ class Admin(Resource):
 
 tdb=client['teacher_database']
 class Teacher(Resource):
-    @jwt_required
+
     def post(self,name):
         data = request.get_json()
         results = tdb.teachers.find()
@@ -96,7 +96,7 @@ class Teacher(Resource):
         if res:
             return {"success":"Entered new User"},200
 
-    @jwt_required
+
     def get(self):
         results = tdb.teachers.find()
         teachers = []
@@ -113,7 +113,7 @@ class Teacher(Resource):
             return {"message":"no data found"}, 404
         return teachers, 200
 
-    @jwt_required
+
     def put(self,name):
         data = request.get_json()
         teachers = tdb.teachers.find()
@@ -145,7 +145,7 @@ class Teacher(Resource):
             )
             return {"message":"updated"},200
 
-    @jwt_required
+
     def delete(self,name):
         teachers = tdb.teachers.find()
         res = next(filter(lambda x: x['name']==name,teachers),None)
@@ -408,7 +408,7 @@ class Student(Resource):
                 ]
             })
         if len(students) == 0:
-            return {"message":"no data found"}, 404
+            return {"message":"no datas found"}, 404
         return students, 200
 #teacher controls
 
@@ -556,7 +556,7 @@ class Student_mark(Resource):
                 ]
             })
         if len(students)==0:
-            return {"messsage":"No record found with that usn"}, 400
+            return {"messsage":"No records found"}, 400
         return students, 200
 
 #student controls
@@ -576,7 +576,7 @@ api.add_resource(Student,'/students/<string:branch>/<string:year>','/students/<s
 #teachers control
 
 #Student control
-api.add_resource(Student_mark,'/get_mark/<string:branch>/<string:year>/<string:usn>','/get_mark/<string:branch>/<string:year>')
+api.add_resource(Student_mark,'/get_mark/<string:branch>/<string:year>/<string:usn>','/get_marks/<string:branch>/<string:year>')
 #student control
 
 if __name__ == '__main__':
