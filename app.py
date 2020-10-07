@@ -413,7 +413,7 @@ class Student(Resource):
 #teacher controls
 
 #student controls
-class Student_mark(Resource):
+class Student_by_usn(Resource):
     def get(self,branch,year,usn):
         st_db = client[branch]
         collection_name = year
@@ -487,6 +487,7 @@ class Student_mark(Resource):
             return {"messsage":"No record found with that usn"}, 400
         return student, 200
 
+class Student_mark(Resource):
     def get(self,branch,year):
         st_db = client[branch]
         collection_name = year
@@ -572,11 +573,12 @@ api.add_resource(Teachers_auth,'/teacher/login')
 #teacher login controls
 
 #teachers control
-api.add_resource(Student,'/students/<string:branch>/<string:year>','/students/<string:branch>/<string:year>/<string:usn>')
+api.add_resource(Student,'/students/<string:branch>/<string:year>')
 #teachers control
 
 #Student control
-api.add_resource(Student_mark,'/get_mark/<string:branch>/<string:year>/<string:usn>','/get_marks/<string:branch>/<string:year>')
+api.add_resource(Student_mark,'/get_mark/<string:branch>/<string:year>')
+api.add_resource(Student_by_usn,'/get_mark/<string:branch>/<string:year>/<string:usn>')
 #student control
 
 if __name__ == '__main__':
