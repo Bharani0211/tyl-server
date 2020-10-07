@@ -577,7 +577,7 @@ api.add_resource(Student,'/students/<string:branch>/<string:year>')
 #teachers control
 
 #Student control
-api.add_resource(Student_mark,'/get_mark/<string:branch>/<string:year>')
+api.add_resource(Student_mark,'/get_marks/<string:branch>/<string:year>')
 api.add_resource(Student_by_usn,'/get_mark/<string:branch>/<string:year>/<string:usn>')
 #student control
 
