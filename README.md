@@ -1,3 +1,3 @@
 # tyl-server
 
-## Documenatation link : 
+## Documenatation link : https://documenter.getpostman.com/view/10593843/TVRg7VNa
