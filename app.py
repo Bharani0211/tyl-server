@@ -728,205 +728,258 @@ class Student(Resource):
         results = st_db[collection_name].find()
         for data in results:
             students.append({
-                "name":data['name'],
-                "mail_id":data['mail_id'],
-                "usn":data['usn'],
-                "phone_no":data['phone_no'],
-                "branch":data['branch'],
-                "vtu_result":data['vtu_result'],
-                "year":year,
-                "marks":[
-                    {
-                        "programming(Px)":[
-                            {
-                                "p1_basics":[{
-                                    'mark_obtained':data['p1_basics'][0]['mark_obtained'],
-                                    'pass_mark':data['p1_basics'][0]['pass_mark'],
-                                    'pass': data['p1_basics'][0]['pass']
-                                }],
-                                "p2_c":[{
-                                        'mark_obtained':data['p2_c'][0]['mark_obtained'],
-                                        'pass_mark':data['p2_c'][0]['pass_mark'],
-                                        'pass': data['p2_c'][0]['pass']
-                                }],
-                                "p2_python":[{
-                                        'mark_obtained':data['p2_python'][0]['mark_obtained'],
-                                        'pass_mark':data['p2_python'][0]['pass_mark'],
-                                        'pass': data['p2_python'][0]['pass']
-                                }],
-                                "p2_advance":[{
-                                        'mark_obtained':data['p2_advance'][0]['mark_obtained'],
-                                        'pass_mark':data['p2_advance'][0]['pass_mark'],
-                                        'pass': data['p2_advance'][0]['pass']
-                                }],
-                                "p3_java":[{
-                                        'mark_obtained':data['p3_java'][0]['mark_obtained'],
-                                        'pass_mark':data['p3_java'][0]['pass_mark'],
-                                        'pass': data['p3_java'][0]['pass']
-                                }],
-                                "p4_java":[{
-                                        'mark_obtained':data['p4_java'][0]['mark_obtained'],
-                                        'pass_mark':data['p4_java'][0]['pass_mark'],
-                                        'pass': data['p4_java'][0]['pass']
-                                }],
-                                "p3_python":[{
-                                        'mark_obtained':data['p3_python'][0]['mark_obtained'],
-                                        'pass_mark':data['p3_python'][0]['pass_mark'],
-                                        'pass': data['p3_python'][0]['pass']
-                                }],
-                                "p4_python":[{
-                                        'mark_obtained':data['p4_python'][0]['mark_obtained'],
-                                        'pass_mark':data['p4_python'][0]['pass_mark'],
-                                        'pass': data['p4_python'][0]['pass']
-                                }],
-                                "p5_cloud_series":[{
-                                        'mark_obtained':data['p5_cloud_series'][0]['mark_obtained'],
-                                        'pass_mark':data['p5_cloud_series'][0]['pass_mark'],
-                                        'pass': data['p5_cloud_series'][0]['pass']
-                                }],
-                                "p5_full_stack":[{
-                                        'mark_obtained':data['p5_full_stack'][0]['mark_obtained'],
-                                        'pass_mark':data['p5_full_stack'][0]['pass_mark'],
-                                        'pass': data['p5_full_stack'][0]['pass']
-                                }],
-                                "p5_data_analysis":[{
-                                        'mark_obtained':data['p5_data_analysis'][0]['mark_obtained'],
-                                        'pass_mark':data['p5_data_analysis'][0]['pass_mark'],
-                                        'pass': data['p5_data_analysis'][0]['pass']
-                                }],
-                                "p5_machine_learning":[{
-                                        'mark_obtained':data['p5_machine_learning'][0]['mark_obtained'],
-                                        'pass_mark':data['p5_machine_learning'][0]['pass_mark'],
-                                        'pass': data['p5_machine_learning'][0]['pass']
-                                }],
-                            }
+                    "name":data['name'],
+                    "mail_id":data['mail_id'],
+                    "usn":data['usn'],
+                    "phone_no":data['phone_no'],
+                    "branch":data['branch'],
+                    "vtu_result":data["vtu_result"],
+                    "year":data['year'],
+                    "marks":[
+                        {
+                                "programming(Px)":[
+                                        {
+                                        "p1_basics":{
+                                                'mark_obtained':data['p1_basics'][0]['mark_obtained'],
+                                                'pass_mark':data['p1_basics'][0]['pass_mark'],
+                                                'pass': data['p1_basics'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "p2_c":{
+                                                'mark_obtained':data['p2_c'][0]['mark_obtained'],
+                                                'pass_mark':data['p2_c'][0]['pass_mark'],
+                                                'pass': data['p2_c'][0]['pass']
+                                        }       },
+                                        {
+                                        "p2_python":{
+                                                'mark_obtained':data['p2_python'][0]['mark_obtained'],
+                                                'pass_mark':data['p2_python'][0]['pass_mark'],
+                                                'pass': data['p2_python'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "p2_advance":{
+                                                'mark_obtained':data['p2_advance'][0]['mark_obtained'],
+                                                'pass_mark':data['p2_advance'][0]['pass_mark'],
+                                                'pass': data['p2_advance'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "p3_java":{
+                                                'mark_obtained':data['p3_java'][0]['mark_obtained'],
+                                                'pass_mark':data['p3_java'][0]['pass_mark'],
+                                                'pass': data['p3_java'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "p4_java":{
+                                                'mark_obtained':data['p4_java'][0]['mark_obtained'],
+                                                'pass_mark':data['p4_java'][0]['pass_mark'],
+                                                'pass': data['p4_java'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "p3_python":{
+                                                'mark_obtained':data['p3_python'][0]['mark_obtained'],
+                                                'pass_mark':data['p3_python'][0]['pass_mark'],
+                                                'pass': data['p3_python'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "p4_python":{
+                                                'mark_obtained':data['p4_python'][0]['mark_obtained'],
+                                                'pass_mark':data['p4_python'][0]['pass_mark'],
+                                                'pass': data['p4_python'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "p5_cloud_series":{
+                                                'mark_obtained':data['p5_cloud_series'][0]['mark_obtained'],
+                                                'pass_mark':data['p5_cloud_series'][0]['pass_mark'],
+                                                'pass': data['p5_cloud_series'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "p5_full_stack":{
+                                                'mark_obtained':data['p5_full_stack'][0]['mark_obtained'],
+                                                'pass_mark':data['p5_full_stack'][0]['pass_mark'],
+                                                'pass': data['p5_full_stack'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "p5_data_analysis":{
+                                                'mark_obtained':data['p5_data_analysis'][0]['mark_obtained'],
+                                                'pass_mark':data['p5_data_analysis'][0]['pass_mark'],
+                                                'pass': data['p5_data_analysis'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "p5_machine_learning":{
+                                                'mark_obtained':data['p5_machine_learning'][0]['mark_obtained'],
+                                                'pass_mark':data['p5_machine_learning'][0]['pass_mark'],
+                                                'pass': data['p5_machine_learning'][0]['pass']
+                                                }
+                                        },
+                                ],
+                                "core(Cx)":[
+                                        {
+                                        "c2_odd":{
+                                                'mark_obtained':data['c2_odd'][0]['mark_obtained'],
+                                                'pass_mark':data['c2_odd'][0]['pass_mark'],
+                                                'pass': data['c2_odd'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "c2_even":{
+                                                'mark_obtained':data['c2_even'][0]['mark_obtained'],
+                                                'pass_mark':data['c2_even'][0]['pass_mark'],
+                                                'pass': data['c2_even'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "c3_odd(III core sub)":{
+                                                'mark_obtained':data['c3_odd(III core sub)'][0]['mark_obtained'],
+                                                'pass_mark':data['c3_odd(III core sub)'][0]['pass_mark'],
+                                                'pass': data['c3_odd(III core sub)'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "c3_even(IV core sub)":{
+                                                'mark_obtained':data['c3_even(IV core sub)'][0]['mark_obtained'],
+                                                'pass_mark':data['c3_even(IV core sub)'][0]['pass_mark'],
+                                                'pass': data['c3_even(IV core sub)'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "c3_full(I to IV sub)":{
+                                                'mark_obtained':data['c3_full(I to IV sub)'][0]['mark_obtained'],
+                                                'pass_mark':data['c3_full(I to IV sub)'][0]['pass_mark'],
+                                                'pass': data['c3_full(I to IV sub)'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "c4_odd(V core sub)":{
+                                                'mark_obtained':data['c4_odd(V core sub)'][0]['mark_obtained'],
+                                                'pass_mark':data['c4_odd(V core sub)'][0]['pass_mark'],
+                                                'pass': data['c4_odd(V core sub)'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "c4_even(VI core sub)":{
+                                                'mark_obtained':data['c4_even(VI core sub)'][0]['mark_obtained'],
+                                                'pass_mark':data['c4_even(VI core sub)'][0]['pass_mark'],
+                                                'pass': data['c4_even(VI core sub)'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "c4_full(I to VI sub)":{
+                                                'mark_obtained':data['c4_full(I to VI sub)'][0]['mark_obtained'],
+                                                'pass_mark':data['c4_full(I to VI sub)'][0]['pass_mark'],
+                                                'pass': data['c4_full(I to VI sub)'][0]['pass']
+                                                }       
+                                        },
+                                        {
+                                        "c5_odd(VII core sub)":{
+                                                'mark_obtained':data['c5_odd(VII core sub)'][0]['mark_obtained'],
+                                                'pass_mark':data['c5_odd(VII core sub)'][0]['pass_mark'],
+                                                'pass': data['c5_odd(VII core sub)'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "c5_even(VIII core sub)":{
+                                                'mark_obtained':data['c5_even(VIII core sub)'][0]['mark_obtained'],
+                                                'pass_mark':data['c5_even(VIII core sub)'][0]['pass_mark'],
+                                                'pass': data['c5_even(VIII core sub)'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "c5_full(I to VIII core sub)":{
+                                                'mark_obtained':data['c5_full(I to VIII core sub)'][0]['mark_obtained'],
+                                                'pass_mark':data['c5_full(I to VIII core sub)'][0]['pass_mark'],
+                                                'pass': data['c5_full(I to VIII core sub)'][0]['pass']
+                                                }
+                                        },
+                                ],
+                                "aptitude(Ax)":[
+                                        {
+                                        "a1":{
+                                                'mark_obtained':data['a1'][0]['mark_obtained'],
+                                                'pass_mark':data['a1'][0]['pass_mark'],
+                                                'pass': data['a1'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "a2":{
+                                                'mark_obtained':data['a2'][0]['mark_obtained'],
+                                                'pass_mark':data['a2'][0]['pass_mark'],
+                                                'pass': data['a2'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "a3":{
+                                                'mark_obtained':data['a3'][0]['mark_obtained'],
+                                                'pass_mark':data['a3'][0]['pass_mark'],
+                                                'pass': data['a3'][0]['pass']
+                                                }
+                                        },
+                                ],
+                                "soft_skill(Sx)":[
+                                        {
+                                        "s1":{
+                                                'mark_obtained':data['s1'][0]['mark_obtained'],
+                                                'pass_mark':data['s1'][0]['pass_mark'],
+                                                'pass': data['s1'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "s2":{
+                                                'mark_obtained':data['s2'][0]['mark_obtained'],
+                                                'pass_mark':data['s2'][0]['pass_mark'],
+                                                'pass': data['s2'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "s3":{
+                                                'mark_obtained':data['s3'][0]['mark_obtained'],
+                                                'pass_mark':data['s3'][0]['pass_mark'],
+                                                'pass': data['s3'][0]['pass']
+                                                }
+                                        },
+                                ],
+                                "english(Ex)":[
+                                        {
+                                        "e3(1st sem)":{
+                                                'mark_obtained':data['e3(1st sem)'][0]['mark_obtained'],
+                                                'pass_mark':data['e3(1st sem)'][0]['pass_mark'],
+                                                'pass': data['e3(1st sem)'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "e3(2nd sem)":{
+                                                'mark_obtained':data['e3(2nd sem)'][0]['mark_obtained'],
+                                                'pass_mark':data['e3(2nd sem)'][0]['pass_mark'],
+                                                'pass': data['e3(2nd sem)'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "e3(consolidate)":{
+                                                'mark_obtained':data['e3(consolidate)'][0]['mark_obtained'],
+                                                'pass_mark':data['e3(consolidate)'][0]['pass_mark'],
+                                                'pass': data['e3(consolidate)'][0]['pass']
+                                                }
+                                        },
+                                ]
+                        }
                         ],
-                        "core(Cx)":[
-                            {
-                                "c2_odd":[{
-                                        'mark_obtained':data['c2_odd'][0]['mark_obtained'],
-                                        'pass_mark':data['c2_odd'][0]['pass_mark'],
-                                        'pass': data['c2_odd'][0]['pass']
-                                }],
-                                "c2_even":[{
-                                        'mark_obtained':data['c2_even'][0]['mark_obtained'],
-                                        'pass_mark':data['c2_even'][0]['pass_mark'],
-                                        'pass': data['c2_even'][0]['pass']
-                                }],
-                                "c3_odd(III core sub)":[{
-                                        'mark_obtained':data['c3_odd(III core sub)'][0]['mark_obtained'],
-                                        'pass_mark':data['c3_odd(III core sub)'][0]['pass_mark'],
-                                        'pass': data['c3_odd(III core sub)'][0]['pass']
-                                }],
-                                "c3_even(IV core sub)":[{
-                                        'mark_obtained':data['c3_even(IV core sub)'][0]['mark_obtained'],
-                                        'pass_mark':data['c3_even(IV core sub)'][0]['pass_mark'],
-                                        'pass': data['c3_even(IV core sub)'][0]['pass']
-                                }],
-                                "c3_full(I to IV sub)":[{
-                                        'mark_obtained':data['c3_full(I to IV sub)'][0]['mark_obtained'],
-                                        'pass_mark':data['c3_full(I to IV sub)'][0]['pass_mark'],
-                                        'pass': data['c3_full(I to IV sub)'][0]['pass']
-                                }],
-                                "c4_odd(V core sub)":[{
-                                        'mark_obtained':data['c4_odd(V core sub)'][0]['mark_obtained'],
-                                        'pass_mark':data['c4_odd(V core sub)'][0]['pass_mark'],
-                                        'pass': data['c4_odd(V core sub)'][0]['pass']
-                                }],
-                                "c4_even(VI core sub)":[{
-                                        'mark_obtained':data['c4_even(VI core sub)'][0]['mark_obtained'],
-                                        'pass_mark':data['c4_even(VI core sub)'][0]['pass_mark'],
-                                        'pass': data['c4_even(VI core sub)'][0]['pass']
-                                }],
-                                "c4_full(I to VI sub)":[{
-                                        'mark_obtained':data['c4_full(I to VI sub)'][0]['mark_obtained'],
-                                        'pass_mark':data['c4_full(I to VI sub)'][0]['pass_mark'],
-                                        'pass': data['c4_full(I to VI sub)'][0]['pass']
-                                }],
-                                "c5_odd(VII core sub)":[{
-                                        'mark_obtained':data['c5_odd(VII core sub)'][0]['mark_obtained'],
-                                        'pass_mark':data['c5_odd(VII core sub)'][0]['pass_mark'],
-                                        'pass': data['c5_odd(VII core sub)'][0]['pass']
-                                }],
-                                "c5_even(VIII core sub)":[{
-                                        'mark_obtained':data['c5_even(VIII core sub)'][0]['mark_obtained'],
-                                        'pass_mark':data['c5_even(VIII core sub)'][0]['pass_mark'],
-                                        'pass': data['c5_even(VIII core sub)'][0]['pass']
-                                }],
-                                "c5_full(I to VIII core sub)":[{
-                                        'mark_obtained':data['c5_full(I to VIII core sub)'][0]['mark_obtained'],
-                                        'pass_mark':data['c5_full(I to VIII core sub)'][0]['pass_mark'],
-                                        'pass': data['c5_full(I to VIII core sub)'][0]['pass']
-                                }],
-                            }
-                        ],
-                        "aptitude(Ax)":[
-                            {
-                                "a1":[{
-                                        'mark_obtained':data['a1'][0]['mark_obtained'],
-                                        'pass_mark':data['a1'][0]['pass_mark'],
-                                        'pass': data['a1'][0]['pass']
-                                }],
-                                "a2":[{
-                                        'mark_obtained':data['a2'][0]['mark_obtained'],
-                                        'pass_mark':data['a2'][0]['pass_mark'],
-                                        'pass': data['a2'][0]['pass']
-                                }],
-                                "a3":[{
-                                        'mark_obtained':data['a3'][0]['mark_obtained'],
-                                        'pass_mark':data['a3'][0]['pass_mark'],
-                                        'pass': data['a3'][0]['pass']
-                                }],
-                            }
-                        ],
-                        "soft_skill(Sx)":[
-                            {
-                                "s1":[{
-                                        'mark_obtained':data['s1'][0]['mark_obtained'],
-                                        'pass_mark':data['s1'][0]['pass_mark'],
-                                        'pass': data['s1'][0]['pass']
-                                }],
-                                "s2":[{
-                                        'mark_obtained':data['s2'][0]['mark_obtained'],
-                                        'pass_mark':data['s2'][0]['pass_mark'],
-                                        'pass': data['s2'][0]['pass']
-                                }],
-                                "s3":[{
-                                        'mark_obtained':data['s3'][0]['mark_obtained'],
-                                        'pass_mark':data['s3'][0]['pass_mark'],
-                                        'pass': data['s3'][0]['pass']
-                                }],
-                            }
-                        ],
-                        "english(Ex)":[
-                            {
-                                "e3(1st sem)":[{
-                                        'mark_obtained':data['e3(1st sem)'][0]['mark_obtained'],
-                                        'pass_mark':data['e3(1st sem)'][0]['pass_mark'],
-                                        'pass': data['e3(1st sem)'][0]['pass']
-                                }],
-                                "e3(2nd sem)":[{
-                                        'mark_obtained':data['e3(2nd sem)'][0]['mark_obtained'],
-                                        'pass_mark':data['e3(2nd sem)'][0]['pass_mark'],
-                                        'pass': data['e3(2nd sem)'][0]['pass']
-                                }],
-                                "e3(consolidate)":[{
-                                        'mark_obtained':data['e3(consolidate)'][0]['mark_obtained'],
-                                        'pass_mark':data['e3(consolidate)'][0]['pass_mark'],
-                                        'pass': data['e3(consolidate)'][0]['pass']
-                                }],
-                            }
-                        ]
-                    }
-                ],
-                "level":[{
-                        "PX_level":check_px_level(data),
-                        "CX_level":check_cx_level(data),
-                        "AX_level":check_ax_level(data),
-                        "SX_level":check_sx_level(data),
-                        "EX_level":check_ex_level(data)
-                }]
-            })
+                        "level":{
+                                "PX_level":check_px_level(data),
+                                "CX_level":check_cx_level(data),
+                                "AX_level":check_ax_level(data),
+                                "SX_level":check_sx_level(data),
+                                "EX_level":check_ex_level(data)
+                        }
+                })
         if len(students) == 0:
             return {"message":"no datas found"}, 404
         return students, 200
@@ -1041,194 +1094,247 @@ class Student_by_usn(Resource):
                     "marks":[
                         {
                                 "programming(Px)":[
-                                {
-                                        "p1_basics":[{
-                                        'mark_obtained':data['p1_basics'][0]['mark_obtained'],
-                                        'pass_mark':data['p1_basics'][0]['pass_mark'],
-                                        'pass': data['p1_basics'][0]['pass']
-                                        }],
-                                        "p2_c":[{
+                                        {
+                                        "p1_basics":{
+                                                'mark_obtained':data['p1_basics'][0]['mark_obtained'],
+                                                'pass_mark':data['p1_basics'][0]['pass_mark'],
+                                                'pass': data['p1_basics'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "p2_c":{
                                                 'mark_obtained':data['p2_c'][0]['mark_obtained'],
                                                 'pass_mark':data['p2_c'][0]['pass_mark'],
                                                 'pass': data['p2_c'][0]['pass']
-                                        }],
-                                        "p2_python":[{
+                                        }       },
+                                        {
+                                        "p2_python":{
                                                 'mark_obtained':data['p2_python'][0]['mark_obtained'],
                                                 'pass_mark':data['p2_python'][0]['pass_mark'],
                                                 'pass': data['p2_python'][0]['pass']
-                                        }],
-                                        "p2_advance":[{
+                                                }
+                                        },
+                                        {
+                                        "p2_advance":{
                                                 'mark_obtained':data['p2_advance'][0]['mark_obtained'],
                                                 'pass_mark':data['p2_advance'][0]['pass_mark'],
                                                 'pass': data['p2_advance'][0]['pass']
-                                        }],
-                                        "p3_java":[{
+                                                }
+                                        },
+                                        {
+                                        "p3_java":{
                                                 'mark_obtained':data['p3_java'][0]['mark_obtained'],
                                                 'pass_mark':data['p3_java'][0]['pass_mark'],
                                                 'pass': data['p3_java'][0]['pass']
-                                        }],
-                                        "p4_java":[{
+                                                }
+                                        },
+                                        {
+                                        "p4_java":{
                                                 'mark_obtained':data['p4_java'][0]['mark_obtained'],
                                                 'pass_mark':data['p4_java'][0]['pass_mark'],
                                                 'pass': data['p4_java'][0]['pass']
-                                        }],
-                                        "p3_python":[{
+                                                }
+                                        },
+                                        {
+                                        "p3_python":{
                                                 'mark_obtained':data['p3_python'][0]['mark_obtained'],
                                                 'pass_mark':data['p3_python'][0]['pass_mark'],
                                                 'pass': data['p3_python'][0]['pass']
-                                        }],
-                                        "p4_python":[{
+                                                }
+                                        },
+                                        {
+                                        "p4_python":{
                                                 'mark_obtained':data['p4_python'][0]['mark_obtained'],
                                                 'pass_mark':data['p4_python'][0]['pass_mark'],
                                                 'pass': data['p4_python'][0]['pass']
-                                        }],
-                                        "p5_cloud_series":[{
+                                                }
+                                        },
+                                        {
+                                        "p5_cloud_series":{
                                                 'mark_obtained':data['p5_cloud_series'][0]['mark_obtained'],
                                                 'pass_mark':data['p5_cloud_series'][0]['pass_mark'],
                                                 'pass': data['p5_cloud_series'][0]['pass']
-                                        }],
-                                        "p5_full_stack":[{
+                                                }
+                                        },
+                                        {
+                                        "p5_full_stack":{
                                                 'mark_obtained':data['p5_full_stack'][0]['mark_obtained'],
                                                 'pass_mark':data['p5_full_stack'][0]['pass_mark'],
                                                 'pass': data['p5_full_stack'][0]['pass']
-                                        }],
-                                        "p5_data_analysis":[{
+                                                }
+                                        },
+                                        {
+                                        "p5_data_analysis":{
                                                 'mark_obtained':data['p5_data_analysis'][0]['mark_obtained'],
                                                 'pass_mark':data['p5_data_analysis'][0]['pass_mark'],
                                                 'pass': data['p5_data_analysis'][0]['pass']
-                                        }],
-                                        "p5_machine_learning":[{
+                                                }
+                                        },
+                                        {
+                                        "p5_machine_learning":{
                                                 'mark_obtained':data['p5_machine_learning'][0]['mark_obtained'],
                                                 'pass_mark':data['p5_machine_learning'][0]['pass_mark'],
                                                 'pass': data['p5_machine_learning'][0]['pass']
-                                        }],
-                                }
+                                                }
+                                        },
                                 ],
                                 "core(Cx)":[
-                                {
-                                        "c2_odd":[{
+                                        {
+                                        "c2_odd":{
                                                 'mark_obtained':data['c2_odd'][0]['mark_obtained'],
                                                 'pass_mark':data['c2_odd'][0]['pass_mark'],
                                                 'pass': data['c2_odd'][0]['pass']
-                                        }],
-                                        "c2_even":[{
+                                                }
+                                        },
+                                        {
+                                        "c2_even":{
                                                 'mark_obtained':data['c2_even'][0]['mark_obtained'],
                                                 'pass_mark':data['c2_even'][0]['pass_mark'],
                                                 'pass': data['c2_even'][0]['pass']
-                                        }],
-                                        "c3_odd(III core sub)":[{
+                                                }
+                                        },
+                                        {
+                                        "c3_odd(III core sub)":{
                                                 'mark_obtained':data['c3_odd(III core sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c3_odd(III core sub)'][0]['pass_mark'],
                                                 'pass': data['c3_odd(III core sub)'][0]['pass']
-                                        }],
-                                        "c3_even(IV core sub)":[{
+                                                }
+                                        },
+                                        {
+                                        "c3_even(IV core sub)":{
                                                 'mark_obtained':data['c3_even(IV core sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c3_even(IV core sub)'][0]['pass_mark'],
                                                 'pass': data['c3_even(IV core sub)'][0]['pass']
-                                        }],
-                                        "c3_full(I to IV sub)":[{
+                                                }
+                                        },
+                                        {
+                                        "c3_full(I to IV sub)":{
                                                 'mark_obtained':data['c3_full(I to IV sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c3_full(I to IV sub)'][0]['pass_mark'],
                                                 'pass': data['c3_full(I to IV sub)'][0]['pass']
-                                        }],
-                                        "c4_odd(V core sub)":[{
+                                                }
+                                        },
+                                        {
+                                        "c4_odd(V core sub)":{
                                                 'mark_obtained':data['c4_odd(V core sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c4_odd(V core sub)'][0]['pass_mark'],
                                                 'pass': data['c4_odd(V core sub)'][0]['pass']
-                                        }],
-                                        "c4_even(VI core sub)":[{
+                                                }
+                                        },
+                                        {
+                                        "c4_even(VI core sub)":{
                                                 'mark_obtained':data['c4_even(VI core sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c4_even(VI core sub)'][0]['pass_mark'],
                                                 'pass': data['c4_even(VI core sub)'][0]['pass']
-                                        }],
-                                        "c4_full(I to VI sub)":[{
+                                                }
+                                        },
+                                        {
+                                        "c4_full(I to VI sub)":{
                                                 'mark_obtained':data['c4_full(I to VI sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c4_full(I to VI sub)'][0]['pass_mark'],
                                                 'pass': data['c4_full(I to VI sub)'][0]['pass']
-                                        }],
-                                        "c5_odd(VII core sub)":[{
+                                                }       
+                                        },
+                                        {
+                                        "c5_odd(VII core sub)":{
                                                 'mark_obtained':data['c5_odd(VII core sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c5_odd(VII core sub)'][0]['pass_mark'],
                                                 'pass': data['c5_odd(VII core sub)'][0]['pass']
-                                        }],
-                                        "c5_even(VIII core sub)":[{
+                                                }
+                                        },
+                                        {
+                                        "c5_even(VIII core sub)":{
                                                 'mark_obtained':data['c5_even(VIII core sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c5_even(VIII core sub)'][0]['pass_mark'],
                                                 'pass': data['c5_even(VIII core sub)'][0]['pass']
-                                        }],
-                                        "c5_full(I to VIII core sub)":[{
+                                                }
+                                        },
+                                        {
+                                        "c5_full(I to VIII core sub)":{
                                                 'mark_obtained':data['c5_full(I to VIII core sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c5_full(I to VIII core sub)'][0]['pass_mark'],
                                                 'pass': data['c5_full(I to VIII core sub)'][0]['pass']
-                                        }],
-                                }
+                                                }
+                                        },
                                 ],
                                 "aptitude(Ax)":[
-                                {
-                                        "a1":[{
+                                        {
+                                        "a1":{
                                                 'mark_obtained':data['a1'][0]['mark_obtained'],
                                                 'pass_mark':data['a1'][0]['pass_mark'],
                                                 'pass': data['a1'][0]['pass']
-                                        }],
-                                        "a2":[{
+                                                }
+                                        },
+                                        {
+                                        "a2":{
                                                 'mark_obtained':data['a2'][0]['mark_obtained'],
                                                 'pass_mark':data['a2'][0]['pass_mark'],
                                                 'pass': data['a2'][0]['pass']
-                                        }],
-                                        "a3":[{
+                                                }
+                                        },
+                                        {
+                                        "a3":{
                                                 'mark_obtained':data['a3'][0]['mark_obtained'],
                                                 'pass_mark':data['a3'][0]['pass_mark'],
                                                 'pass': data['a3'][0]['pass']
-                                        }],
-                                }
+                                                }
+                                        },
                                 ],
                                 "soft_skill(Sx)":[
-                                {
-                                        "s1":[{
+                                        {
+                                        "s1":{
                                                 'mark_obtained':data['s1'][0]['mark_obtained'],
                                                 'pass_mark':data['s1'][0]['pass_mark'],
                                                 'pass': data['s1'][0]['pass']
-                                        }],
-                                        "s2":[{
+                                                }
+                                        },
+                                        {
+                                        "s2":{
                                                 'mark_obtained':data['s2'][0]['mark_obtained'],
                                                 'pass_mark':data['s2'][0]['pass_mark'],
                                                 'pass': data['s2'][0]['pass']
-                                        }],
-                                        "s3":[{
+                                                }
+                                        },
+                                        {
+                                        "s3":{
                                                 'mark_obtained':data['s3'][0]['mark_obtained'],
                                                 'pass_mark':data['s3'][0]['pass_mark'],
                                                 'pass': data['s3'][0]['pass']
-                                        }],
-                                }
+                                                }
+                                        },
                                 ],
                                 "english(Ex)":[
-                                {
-                                        "e3(1st sem)":[{
+                                        {
+                                        "e3(1st sem)":{
                                                 'mark_obtained':data['e3(1st sem)'][0]['mark_obtained'],
                                                 'pass_mark':data['e3(1st sem)'][0]['pass_mark'],
                                                 'pass': data['e3(1st sem)'][0]['pass']
-                                        }],
-                                        "e3(2nd sem)":[{
+                                                }
+                                        },
+                                        {
+                                        "e3(2nd sem)":{
                                                 'mark_obtained':data['e3(2nd sem)'][0]['mark_obtained'],
                                                 'pass_mark':data['e3(2nd sem)'][0]['pass_mark'],
                                                 'pass': data['e3(2nd sem)'][0]['pass']
-                                        }],
-                                        "e3(consolidate)":[{
+                                                }
+                                        },
+                                        {
+                                        "e3(consolidate)":{
                                                 'mark_obtained':data['e3(consolidate)'][0]['mark_obtained'],
                                                 'pass_mark':data['e3(consolidate)'][0]['pass_mark'],
                                                 'pass': data['e3(consolidate)'][0]['pass']
-                                        }],
-                                }
+                                                }
+                                        },
                                 ]
                         }
                         ],
-                        "level":[{
+                        "level":{
                                 "PX_level":check_px_level(data),
                                 "CX_level":check_cx_level(data),
                                 "AX_level":check_ax_level(data),
                                 "SX_level":check_sx_level(data),
                                 "EX_level":check_ex_level(data)
-                        }]
+                        }
                 })
         if len(student)==0:
             return {"messsage":"No record found with that usn"}, 400
@@ -1242,194 +1348,254 @@ class Student_mark(Resource):
         results = st_db[collection_name].find()
         for data in results:
             students.append({
-                "name":data['name'],
-                "usn":data['usn'],
-                "branch":data['branch'],
-                "year":data['year'],
-                "marks":[{
+                    "name":data['name'],
+                    "usn":data['usn'],
+                    "branch":data['branch'],
+                    "year":data['year'],
+                    "marks":[
+                        {
                                 "programming(Px)":[
-                                {
-                                        "p1_basics":[{
-                                        'mark_obtained':data['p1_basics'][0]['mark_obtained'],
-                                        'pass_mark':data['p1_basics'][0]['pass_mark'],
-                                        'pass': data['p1_basics'][0]['pass']
-                                        }],
-                                        "p2_c":[{
+                                        {
+                                        "p1_basics":{
+                                                'mark_obtained':data['p1_basics'][0]['mark_obtained'],
+                                                'pass_mark':data['p1_basics'][0]['pass_mark'],
+                                                'pass': data['p1_basics'][0]['pass']
+                                                }
+                                        },
+                                        {
+                                        "p2_c":{
                                                 'mark_obtained':data['p2_c'][0]['mark_obtained'],
                                                 'pass_mark':data['p2_c'][0]['pass_mark'],
                                                 'pass': data['p2_c'][0]['pass']
-                                        }],
-                                        "p2_python":[{
+                                        }       },
+                                        {
+                                        "p2_python":{
                                                 'mark_obtained':data['p2_python'][0]['mark_obtained'],
                                                 'pass_mark':data['p2_python'][0]['pass_mark'],
                                                 'pass': data['p2_python'][0]['pass']
-                                        }],
-                                        "p2_advance":[{
+                                                }
+                                        },
+                                        {
+                                        "p2_advance":{
                                                 'mark_obtained':data['p2_advance'][0]['mark_obtained'],
                                                 'pass_mark':data['p2_advance'][0]['pass_mark'],
                                                 'pass': data['p2_advance'][0]['pass']
-                                        }],
-                                        "p3_java":[{
+                                                }
+                                        },
+                                        {
+                                        "p3_java":{
                                                 'mark_obtained':data['p3_java'][0]['mark_obtained'],
                                                 'pass_mark':data['p3_java'][0]['pass_mark'],
                                                 'pass': data['p3_java'][0]['pass']
-                                        }],
-                                        "p4_java":[{
+                                                }
+                                        },
+                                        {
+                                        "p4_java":{
                                                 'mark_obtained':data['p4_java'][0]['mark_obtained'],
                                                 'pass_mark':data['p4_java'][0]['pass_mark'],
                                                 'pass': data['p4_java'][0]['pass']
-                                        }],
-                                        "p3_python":[{
+                                                }
+                                        },
+                                        {
+                                        "p3_python":{
                                                 'mark_obtained':data['p3_python'][0]['mark_obtained'],
                                                 'pass_mark':data['p3_python'][0]['pass_mark'],
                                                 'pass': data['p3_python'][0]['pass']
-                                        }],
-                                        "p4_python":[{
+                                                }
+                                        },
+                                        {
+                                        "p4_python":{
                                                 'mark_obtained':data['p4_python'][0]['mark_obtained'],
                                                 'pass_mark':data['p4_python'][0]['pass_mark'],
                                                 'pass': data['p4_python'][0]['pass']
-                                        }],
-                                        "p5_cloud_series":[{
+                                                }
+                                        },
+                                        {
+                                        "p5_cloud_series":{
                                                 'mark_obtained':data['p5_cloud_series'][0]['mark_obtained'],
                                                 'pass_mark':data['p5_cloud_series'][0]['pass_mark'],
                                                 'pass': data['p5_cloud_series'][0]['pass']
-                                        }],
-                                        "p5_full_stack":[{
+                                                }
+                                        },
+                                        {
+                                        "p5_full_stack":{
                                                 'mark_obtained':data['p5_full_stack'][0]['mark_obtained'],
                                                 'pass_mark':data['p5_full_stack'][0]['pass_mark'],
                                                 'pass': data['p5_full_stack'][0]['pass']
-                                        }],
-                                        "p5_data_analysis":[{
+                                                }
+                                        },
+                                        {
+                                        "p5_data_analysis":{
                                                 'mark_obtained':data['p5_data_analysis'][0]['mark_obtained'],
                                                 'pass_mark':data['p5_data_analysis'][0]['pass_mark'],
                                                 'pass': data['p5_data_analysis'][0]['pass']
-                                        }],
-                                        "p5_machine_learning":[{
+                                                }
+                                        },
+                                        {
+                                        "p5_machine_learning":{
                                                 'mark_obtained':data['p5_machine_learning'][0]['mark_obtained'],
                                                 'pass_mark':data['p5_machine_learning'][0]['pass_mark'],
                                                 'pass': data['p5_machine_learning'][0]['pass']
-                                        }],
-                                }],
+                                                }
+                                        },
+                                ],
                                 "core(Cx)":[
-                                {
-                                        "c2_odd":[{
+                                        {
+                                        "c2_odd":{
                                                 'mark_obtained':data['c2_odd'][0]['mark_obtained'],
                                                 'pass_mark':data['c2_odd'][0]['pass_mark'],
                                                 'pass': data['c2_odd'][0]['pass']
-                                        }],
-                                        "c2_even":[{
+                                                }
+                                        },
+                                        {
+                                        "c2_even":{
                                                 'mark_obtained':data['c2_even'][0]['mark_obtained'],
                                                 'pass_mark':data['c2_even'][0]['pass_mark'],
                                                 'pass': data['c2_even'][0]['pass']
-                                        }],
-                                        "c3_odd(III core sub)":[{
+                                                }
+                                        },
+                                        {
+                                        "c3_odd(III core sub)":{
                                                 'mark_obtained':data['c3_odd(III core sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c3_odd(III core sub)'][0]['pass_mark'],
                                                 'pass': data['c3_odd(III core sub)'][0]['pass']
-                                        }],
-                                        "c3_even(IV core sub)":[{
+                                                }
+                                        },
+                                        {
+                                        "c3_even(IV core sub)":{
                                                 'mark_obtained':data['c3_even(IV core sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c3_even(IV core sub)'][0]['pass_mark'],
                                                 'pass': data['c3_even(IV core sub)'][0]['pass']
-                                        }],
-                                        "c3_full(I to IV sub)":[{
+                                                }
+                                        },
+                                        {
+                                        "c3_full(I to IV sub)":{
                                                 'mark_obtained':data['c3_full(I to IV sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c3_full(I to IV sub)'][0]['pass_mark'],
                                                 'pass': data['c3_full(I to IV sub)'][0]['pass']
-                                        }],
-                                        "c4_odd(V core sub)":[{
+                                                }
+                                        },
+                                        {
+                                        "c4_odd(V core sub)":{
                                                 'mark_obtained':data['c4_odd(V core sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c4_odd(V core sub)'][0]['pass_mark'],
                                                 'pass': data['c4_odd(V core sub)'][0]['pass']
-                                        }],
-                                        "c4_even(VI core sub)":[{
+                                                }
+                                        },
+                                        {
+                                        "c4_even(VI core sub)":{
                                                 'mark_obtained':data['c4_even(VI core sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c4_even(VI core sub)'][0]['pass_mark'],
                                                 'pass': data['c4_even(VI core sub)'][0]['pass']
-                                        }],
-                                        "c4_full(I to VI sub)":[{
+                                                }
+                                        },
+                                        {
+                                        "c4_full(I to VI sub)":{
                                                 'mark_obtained':data['c4_full(I to VI sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c4_full(I to VI sub)'][0]['pass_mark'],
                                                 'pass': data['c4_full(I to VI sub)'][0]['pass']
-                                        }],
-                                        "c5_odd(VII core sub)":[{
+                                                }       
+                                        },
+                                        {
+                                        "c5_odd(VII core sub)":{
                                                 'mark_obtained':data['c5_odd(VII core sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c5_odd(VII core sub)'][0]['pass_mark'],
                                                 'pass': data['c5_odd(VII core sub)'][0]['pass']
-                                        }],
-                                        "c5_even(VIII core sub)":[{
+                                                }
+                                        },
+                                        {
+                                        "c5_even(VIII core sub)":{
                                                 'mark_obtained':data['c5_even(VIII core sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c5_even(VIII core sub)'][0]['pass_mark'],
                                                 'pass': data['c5_even(VIII core sub)'][0]['pass']
-                                        }],
-                                        "c5_full(I to VIII core sub)":[{
+                                                }
+                                        },
+                                        {
+                                        "c5_full(I to VIII core sub)":{
                                                 'mark_obtained':data['c5_full(I to VIII core sub)'][0]['mark_obtained'],
                                                 'pass_mark':data['c5_full(I to VIII core sub)'][0]['pass_mark'],
                                                 'pass': data['c5_full(I to VIII core sub)'][0]['pass']
-                                        }],
-                                }],
+                                                }
+                                        },
+                                ],
                                 "aptitude(Ax)":[
-                                {
-                                        "a1":[{
+                                        {
+                                        "a1":{
                                                 'mark_obtained':data['a1'][0]['mark_obtained'],
                                                 'pass_mark':data['a1'][0]['pass_mark'],
                                                 'pass': data['a1'][0]['pass']
-                                        }],
-                                        "a2":[{
+                                                }
+                                        },
+                                        {
+                                        "a2":{
                                                 'mark_obtained':data['a2'][0]['mark_obtained'],
                                                 'pass_mark':data['a2'][0]['pass_mark'],
                                                 'pass': data['a2'][0]['pass']
-                                        }],
-                                        "a3":[{
+                                                }
+                                        },
+                                        {
+                                        "a3":{
                                                 'mark_obtained':data['a3'][0]['mark_obtained'],
                                                 'pass_mark':data['a3'][0]['pass_mark'],
                                                 'pass': data['a3'][0]['pass']
-                                        }],
-                                }],
+                                                }
+                                        },
+                                ],
                                 "soft_skill(Sx)":[
-                                {
-                                        "s1":[{
+                                        {
+                                        "s1":{
                                                 'mark_obtained':data['s1'][0]['mark_obtained'],
                                                 'pass_mark':data['s1'][0]['pass_mark'],
                                                 'pass': data['s1'][0]['pass']
-                                        }],
-                                        "s2":[{
+                                                }
+                                        },
+                                        {
+                                        "s2":{
                                                 'mark_obtained':data['s2'][0]['mark_obtained'],
                                                 'pass_mark':data['s2'][0]['pass_mark'],
                                                 'pass': data['s2'][0]['pass']
-                                        }],
-                                        "s3":[{
+                                                }
+                                        },
+                                        {
+                                        "s3":{
                                                 'mark_obtained':data['s3'][0]['mark_obtained'],
                                                 'pass_mark':data['s3'][0]['pass_mark'],
                                                 'pass': data['s3'][0]['pass']
-                                        }],
-                                }],
+                                                }
+                                        },
+                                ],
                                 "english(Ex)":[
-                                {
-                                        "e3(1st sem)":[{
+                                        {
+                                        "e3(1st sem)":{
                                                 'mark_obtained':data['e3(1st sem)'][0]['mark_obtained'],
                                                 'pass_mark':data['e3(1st sem)'][0]['pass_mark'],
                                                 'pass': data['e3(1st sem)'][0]['pass']
-                                        }],
-                                        "e3(2nd sem)":[{
+                                                }
+                                        },
+                                        {
+                                        "e3(2nd sem)":{
                                                 'mark_obtained':data['e3(2nd sem)'][0]['mark_obtained'],
                                                 'pass_mark':data['e3(2nd sem)'][0]['pass_mark'],
                                                 'pass': data['e3(2nd sem)'][0]['pass']
-                                        }],
-                                        "e3(consolidate)":[{
+                                                }
+                                        },
+                                        {
+                                        "e3(consolidate)":{
                                                 'mark_obtained':data['e3(consolidate)'][0]['mark_obtained'],
                                                 'pass_mark':data['e3(consolidate)'][0]['pass_mark'],
                                                 'pass': data['e3(consolidate)'][0]['pass']
-                                        }],
-                                }]
-                        }],
-                        "level":[{
+                                                }
+                                        },
+                                ]
+                        }
+                        ],
+                        "level":{
                                 "PX_level":check_px_level(data),
                                 "CX_level":check_cx_level(data),
                                 "AX_level":check_ax_level(data),
                                 "SX_level":check_sx_level(data),
                                 "EX_level":check_ex_level(data)
-                        }]
+                        }
                 })
         if len(students)==0:
             return {"messsage":"No records found"}, 400
@@ -1448,7 +1614,7 @@ api.add_resource(Teachers_auth,'/teacher/login')
 #teacher login controls
 
 #teachers control
-api.add_resource(Student,'/students/<string:branch>/<string:year>','/students/<string:branch>/<string:year>/<string:usn>')
+api.add_resource(Student,'/students/<string:branch>/<string:year>')
 #teachers control
 
 #Student control
