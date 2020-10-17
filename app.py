@@ -1338,7 +1338,7 @@ class Student_by_usn(Resource):
                 })
         if len(student)==0:
             return {"messsage":"No record found with that usn"}, 400
-        return student, 200
+        return student[0], 200
 
 class Student_mark(Resource):
     def get(self,branch,year):
