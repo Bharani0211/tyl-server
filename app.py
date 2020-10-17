@@ -1091,9 +1091,9 @@ class Student_by_usn(Resource):
                     "usn":data['usn'],
                     "branch":data['branch'],
                     "year":data['year'],
-                    "marks":
+                    "marks":[
                         {
-                                "programming(Px)":[
+                        "programming(Px)":[
                                         {
                                         "p1_basics":{
                                                 'mark_obtained':data['p1_basics'][0]['mark_obtained'],
@@ -1102,11 +1102,12 @@ class Student_by_usn(Resource):
                                                 }
                                         },
                                         {
-                                        "p2_c":{
-                                                'mark_obtained':data['p2_c'][0]['mark_obtained'],
-                                                'pass_mark':data['p2_c'][0]['pass_mark'],
-                                                'pass': data['p2_c'][0]['pass']
-                                        }       },
+                                        "p1_basics":{
+                                                'mark_obtained':data['p1_basics'][0]['mark_obtained'],
+                                                'pass_mark':data['p1_basics'][0]['pass_mark'],
+                                                'pass': data['p1_basics'][0]['pass']
+                                                }
+                                        },
                                         {
                                         "p2_python":{
                                                 'mark_obtained':data['p2_python'][0]['mark_obtained'],
@@ -1176,9 +1177,11 @@ class Student_by_usn(Resource):
                                                 'pass_mark':data['p5_machine_learning'][0]['pass_mark'],
                                                 'pass': data['p5_machine_learning'][0]['pass']
                                                 }
-                                        },
-                                ],
-                                "core(Cx)":[
+                                        }
+                                ]
+                        },
+                        {
+                        "core(Cx)":[
                                         {
                                         "c2_odd":{
                                                 'mark_obtained':data['c2_odd'][0]['mark_obtained'],
@@ -1255,9 +1258,11 @@ class Student_by_usn(Resource):
                                                 'pass_mark':data['c5_full(I to VIII core sub)'][0]['pass_mark'],
                                                 'pass': data['c5_full(I to VIII core sub)'][0]['pass']
                                                 }
-                                        },
-                                ],
-                                "aptitude(Ax)":[
+                                        }
+                                ]
+                        },
+                        {
+                        "aptitude(Ax)":[
                                         {
                                         "a1":{
                                                 'mark_obtained':data['a1'][0]['mark_obtained'],
@@ -1278,9 +1283,11 @@ class Student_by_usn(Resource):
                                                 'pass_mark':data['a3'][0]['pass_mark'],
                                                 'pass': data['a3'][0]['pass']
                                                 }
-                                        },
-                                ],
-                                "soft_skill(Sx)":[
+                                        }
+                                ]
+                        },
+                        {
+                        "soft_skill(Sx)":[
                                         {
                                         "s1":{
                                                 'mark_obtained':data['s1'][0]['mark_obtained'],
@@ -1301,9 +1308,11 @@ class Student_by_usn(Resource):
                                                 'pass_mark':data['s3'][0]['pass_mark'],
                                                 'pass': data['s3'][0]['pass']
                                                 }
-                                        },
-                                ],
-                                "english(Ex)":[
+                                        }
+                                ]
+                        },
+                        {
+                        "english(Ex)":[
                                         {
                                         "e3(1st sem)":{
                                                 'mark_obtained':data['e3(1st sem)'][0]['mark_obtained'],
@@ -1326,7 +1335,8 @@ class Student_by_usn(Resource):
                                                 }
                                         },
                                 ]
-                        }
+                        },
+                    ],
                         "level":{
                                 "PX_level":check_px_level(data),
                                 "CX_level":check_cx_level(data),
