@@ -1091,7 +1091,7 @@ class Student_by_usn(Resource):
                     "usn":data['usn'],
                     "branch":data['branch'],
                     "year":data['year'],
-                    "marks":[
+                    "marks":
                         {
                                 "programming(Px)":[
                                         {
@@ -1327,7 +1327,6 @@ class Student_by_usn(Resource):
                                         },
                                 ]
                         }
-                        ],
                         "level":{
                                 "PX_level":check_px_level(data),
                                 "CX_level":check_cx_level(data),
