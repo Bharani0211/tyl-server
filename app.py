@@ -1093,56 +1093,56 @@ class Student_by_usn(Resource):
                     "year":data['year'],
                     "subjects":[
                                 {
-                                "Programming":[{
-                                        "0":"P1 Basics",
-                                        "1":"P2 C",
-                                        "2":"P2 Python",
-                                        "3":"P2 Advance",
-                                        "4":"P3 Java",
-                                        "5":"P4 Java",
-                                        "6":"P3 Python",
-                                        "7":"P4 Python",
-                                        "8":"P5 Cloud series",
-                                        "9":"P5 Full stack",
-                                        "10":"P5 Data analysis",
-                                        "11":"P5 Machine learning"
-                                }]
+                                "p":[
+                                        {"p0":"P1 Basics"},
+                                        {"p1":"P2 C"},
+                                        {"p2":"P2 Python"},
+                                        {"p3":"P2 Advance"},
+                                        {"p4":"P3 Java"},
+                                        {"p5":"P4 Java"},
+                                        {"p6":"P3 Python"},
+                                        {"p7":"P4 Python"},
+                                        {"p8":"P5 Cloud series"},
+                                        {"p9":"P5 Full stack"},
+                                        {"p10":"P5 Data analysis"},
+                                        {"p11":"P5 Machine learning"}
+                                ]
                                 },
                                 {
-                                "Core":[{
-                                        "0":"C2 Odd",
-                                        "1":"C2 Even",
-                                        "2":"C3 Odd(III core sub)",
-                                        "3":"C3 Even(IV core sub)",
-                                        "4":"C3 Full(I to IV sub)",
-                                        "5":"C4 Odd(V core sub)",
-                                        "6":"C4 Even(VI core sub)",
-                                        "7":"C4 Full(I to VI sub)",
-                                        "8":"C5 Odd(VII core sub)",
-                                        "9":"C5 Even(VIII core sub)",
-                                        "10":"C5 Full(I to VIII core sub)"
-                                }]
+                                "c":[
+                                        {"c0":"C2 Odd"},
+                                        {"c1":"C2 Even"},
+                                        {"c2":"C3 Odd(III core sub)"},
+                                        {"c3":"C3 Even(IV core sub)"},
+                                        {"c4":"C3 Full(I to IV sub)"},
+                                        {"c5":"C4 Odd(V core sub)"},
+                                        {"c6":"C4 Even(VI core sub)"},
+                                        {"c7":"C4 Full(I to VI sub)"},
+                                        {"c8":"C5 Odd(VII core sub)"},
+                                        {"c9":"C5 Even(VIII core sub)"},
+                                        {"c10":"C5 Full(I to VIII core sub)"}
+                                ]
                                 },
                                 {
-                                "Aptitude":[{
-                                        "0":"A1",
-                                        "1":"A2",
-                                        "2":"A3"
-                                }]
+                                "a":[
+                                        {"a0":"A1"},
+                                        {"a1":"A2"},
+                                        {"a2":"A3"}
+                                ]
                                 },
-                                {
-                                "softskill":[{
-                                        "0":"S1",
-                                        "1":"S2",
-                                        "2":"S3"
-                                }]
+                               {
+                                "s":[
+                                        {"s0":"S1"},
+                                        {"s1":"S2"},
+                                        {"s2":"S3"}
+                                ]
                                 },
-                                {
-                                "English":[{
-                                        "0":"E3 (1st Sem)",
-                                        "1":"E3 (2nd Sem)",
-                                        "2":"E3 (Consolidate)",
-                                }]
+                               {
+                                "e":[
+                                        {"e0":"E3 (1st sem)"},
+                                        {"e1":"E3 (2nd sem)"},
+                                        {"e2":"E3 (Consolidate)"}
+                                ]
                                 },
                         ],
                     "marks":[
