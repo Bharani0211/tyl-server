@@ -1091,48 +1091,6 @@ class Student_by_usn(Resource):
                     "usn":data['usn'],
                     "branch":data['branch'],
                     "year":data['year'],
-                    "p":[
-                                {"0":"P1 Basics"},
-                                {"1":"P2 C"},
-                                {"2":"P2 Python"},
-                                {"3":"P2 Advance"},
-                                {"4":"P3 Java"},
-                                {"5":"P4 Java"},
-                                {"6":"P3 Python"},
-                                {"7":"P4 Python"},
-                                {"8":"P5 Cloud series"},
-                                {"9":"P5 Full stack"},
-                                {"10":"P5 Data analysis"},
-                                {"11":"P5 Machine learning"}
-                        ],
-                        "c":[
-                                {"0":"C2 Odd"},
-                                {"1":"C2 Even"},
-                                {"2":"C3 Odd(III core sub)"},
-                                {"3":"C3 Even(IV core sub)"},
-                                {"4":"C3 Full(I to IV sub)"},
-                                {"5":"C4 Odd(V core sub)"},
-                                {"6":"C4 Even(VI core sub)"},
-                                {"7":"C4 Full(I to VI sub)"},
-                                {"8":"C5 Odd(VII core sub)"},
-                                {"9":"C5 Even(VIII core sub)"},
-                                {"10":"C5 Full(I to VIII core sub)"}
-                        ],
-                        "a":[
-                                {"0":"A1"},
-                                {"1":"A2"},
-                                {"2":"A3"}
-                        ],
-                        "s":[
-                                {"4":"S1"},
-                                {"5":"S2"},
-                                {"6":"S3"}
-                        ],
-                        "e":[
-                                {"7":"E3 (1st sem)"},
-                                {"8":"E3 (2nd sem)"},
-                                {"9":"E3 (Consolidate)"}
-                        ],
                     "marks":[
                         {
                         "programming(Px)":[
@@ -1144,10 +1102,10 @@ class Student_by_usn(Resource):
                                                 }
                                         },
                                         {
-                                        "p1_basics":{
-                                                'mark_obtained':data['p1_basics'][0]['mark_obtained'],
-                                                'pass_mark':data['p1_basics'][0]['pass_mark'],
-                                                'pass': data['p1_basics'][0]['pass']
+                                        "p2_c":{
+                                                'mark_obtained':data['p2_c'][0]['mark_obtained'],
+                                                'pass_mark':data['p2_c'][0]['pass_mark'],
+                                                'pass': data['p2_c'][0]['pass']
                                                 }
                                         },
                                         {
