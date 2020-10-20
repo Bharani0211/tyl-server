@@ -1106,32 +1106,32 @@ class Student_by_usn(Resource):
                                 {"11":"P5 Machine learning"}
                         ],
                         "c":[
-                                {"c0":"C2 Odd"},
-                                {"c1":"C2 Even"},
-                                {"c2":"C3 Odd(III core sub)"},
-                                {"c3":"C3 Even(IV core sub)"},
-                                {"c4":"C3 Full(I to IV sub)"},
-                                {"c5":"C4 Odd(V core sub)"},
-                                {"c6":"C4 Even(VI core sub)"},
-                                {"c7":"C4 Full(I to VI sub)"},
-                                {"c8":"C5 Odd(VII core sub)"},
-                                {"c9":"C5 Even(VIII core sub)"},
-                                {"c10":"C5 Full(I to VIII core sub)"}
+                                {"0":"C2 Odd"},
+                                {"1":"C2 Even"},
+                                {"2":"C3 Odd(III core sub)"},
+                                {"3":"C3 Even(IV core sub)"},
+                                {"4":"C3 Full(I to IV sub)"},
+                                {"5":"C4 Odd(V core sub)"},
+                                {"6":"C4 Even(VI core sub)"},
+                                {"7":"C4 Full(I to VI sub)"},
+                                {"8":"C5 Odd(VII core sub)"},
+                                {"9":"C5 Even(VIII core sub)"},
+                                {"10":"C5 Full(I to VIII core sub)"}
                         ],
                         "a":[
-                                {"a0":"A1"},
-                                {"a1":"A2"},
-                                {"a2":"A3"}
+                                {"0":"A1"},
+                                {"1":"A2"},
+                                {"2":"A3"}
                         ],
                         "s":[
-                                {"s0":"S1"},
-                                {"s1":"S2"},
-                                {"s2":"S3"}
+                                {"4":"S1"},
+                                {"5":"S2"},
+                                {"6":"S3"}
                         ],
                         "e":[
-                                {"e0":"E3 (1st sem)"},
-                                {"e1":"E3 (2nd sem)"},
-                                {"e2":"E3 (Consolidate)"}
+                                {"7":"E3 (1st sem)"},
+                                {"8":"E3 (2nd sem)"},
+                                {"9":"E3 (Consolidate)"}
                         ],
                     "marks":[
                         {
