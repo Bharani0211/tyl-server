@@ -1298,7 +1298,6 @@ class Student_by_usn(Resource):
                                                 'pass': data['e3(2nd sem)'][0]['pass']
                                         },
                                         {
-                                        "e3(consolidate)":{
                                                 "name":"E3 (Consolidate)",
                                                 'mark_obtained':data['e3(consolidate)'][0]['mark_obtained'],
                                                 'pass_mark':data['e3(consolidate)'][0]['pass_mark'],
