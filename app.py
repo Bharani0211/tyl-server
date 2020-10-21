@@ -1280,12 +1280,6 @@ class Student_by_usn(Resource):
                                                 'mark_obtained':data['s3'][0]['mark_obtained'],
                                                 'pass_mark':data['s3'][0]['pass_mark'],
                                                 'pass': data['s3'][0]['pass']
-                                        },
-                                        {
-                                                "name":"S3",
-                                                'mark_obtained':data['s3'][0]['mark_obtained'],
-                                                'pass_mark':data['s3'][0]['pass_mark'],
-                                                'pass': data['s3'][0]['pass']
                                         }
                                 ]
                         },
