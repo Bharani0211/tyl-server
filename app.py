@@ -1598,7 +1598,7 @@ api.add_resource(Teachers_auth,'/teacher/login')
 #teacher login controls
 
 #teachers control
-api.add_resource(Student,'/students/<string:branch>/<string:year>')
+api.add_resource(Student,'/students/<string:branch>/<string:year>','/students/<string:branch>/<string:year>/<string:usn>')
 #teachers control
 
 #Student control
