@@ -1302,7 +1302,6 @@ class Student_by_usn(Resource):
                                                 'mark_obtained':data['e3(consolidate)'][0]['mark_obtained'],
                                                 'pass_mark':data['e3(consolidate)'][0]['pass_mark'],
                                                 'pass': data['e3(consolidate)'][0]['pass']
-                                                }
                                         },
                                 ]
                         },
